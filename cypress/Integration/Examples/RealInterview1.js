@@ -1,0 +1,15 @@
+describe('Question1', function(){
+    it('TestCase1', function(){
+        cy.visit('https://www.globalsqa.com/angularJs-protractor/BankingProject/#/login')
+        cy.get(':nth-child(3) > .btn').click()
+        cy.get('[ng-class="btnClass1"]').click()
+        cy.get(':nth-child(1) > .form-control').type('Naomi')
+        cy.get(':nth-child(2) > .form-control').type('Dickson')
+        cy.get(':nth-child(3) > .form-control').type('10024')
+        cy.get('form.ng-dirty > .btn').click()
+        cy.get('[ng-class="btnClass3"]')
+        cy.get(':nth-child(6) > :nth-child(1)').should('contain', 'Naomi')
+        //cy.get(':nth-child(7) > :nth-child(5) > button').click()
+        //cy.get(':nth-child(7) > :nth-child(1)').should('not.be.visible')
+    })
+})
